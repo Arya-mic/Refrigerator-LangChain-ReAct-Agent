@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+logs/
+agent_first/
+chroma_db/
+.DS_Store
