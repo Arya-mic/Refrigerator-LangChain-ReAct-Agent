@@ -19,7 +19,7 @@ class BaseModelFactory(ABC):
 class ChatModelFactory(BaseModelFactory):
     def generator(self) -> Optional[Embeddings | BaseChatModel]:
         # 优先读取环境变量，没有就用内嵌（临时方案）
-        api_key = os.getenv("DASHSCOPE_API_KEY") or "sk-5b67306501ae41779f0ea6ea1b49710f"
+        api_key = os.getenv("DASHSCOPE_API_KEY") or ""
 
         if not api_key:
             raise ValueError("DASHSCOPE_API_KEY 未配置，请检查环境变量或代码")
